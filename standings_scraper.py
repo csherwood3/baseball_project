@@ -1,7 +1,9 @@
 import json
 import baseball_scraper as bs
+import sqlite3
 
-league_data = bs.standings(2020)
+user_year = input("Enter the year you wish to scrape: ")
+league_data = bs.standings(int(user_year))
 
 
 def make_all_standings(data=league_data, league=0):
